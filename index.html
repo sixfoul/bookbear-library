@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BOOKBEAR SERVICES</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    * {box-sizing: border-box;}
+
+/* scrolling down to second section effect */ 
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* section 1 code styling */
+
+.container {
+  position: relative;
+  width: 89%;
+  height: 660px;
+}
+
+.title {
+  position: absolute;
+  color: #f5e9e2;
+  float: left;
+  text-align: justify;
+  width: 95%;
+  top: 140px;
+  font-weight: 700;
+  font-size: 90px;
+  font-family: georgia;
+  z-index: 1;
+  transition: top .5s ease;
+}
+
+.container:hover .title {
+  top: 90px;
+}
+
+.button {
+  position: relative;
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-family: georgia;
+  margin-top: -40px;
+  font-size: 10px;
+  border: none;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.button a {
+  text-align: center;
+  text-decoration: none;
+  z-index: 1;
+}
+
+button {
+  border: none;
+  float: left;
+  margin-left: 10px;
+  padding:15px 15px;
+  margin-right: 30px;
+  margin-top: -20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-style: bold;
+  letter-spacing: 4px;
+  text-transform: lowercase;
+  color: #f5e9e2;
+  background-color: #773344;
+  border-radius: 25px;
+}
+
+button:hover {
+  background-color: white;
+  color: #773344;
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 2.0s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#navbar-buttons button {
+  font-family: arial;
+}
+
+.container:hover .button {
+  opacity: 1;
+}
+
+/* borrow button */
+
+#borrow-button {
+  position: relative; 
+  text-align: center;
+  font-family: georgia;
+  font-size: 30px;
+  letter-spacing: 2px; 
+  right: 37px; 
+  top: 90px; 
+  background-color: #03254c; 
+  border: 5px solid #f5e9e2;
+  padding: 30px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+#borrow-button:hover {
+  background-color: #f5e9e2;
+  color: #03254c;
+  text-decoration: none;
+  border-color: #03254c;
+  -moz-box-shadow: 0 0 10px #738aff;
+  -webkit-box-shadow: 0 0 10px #738aff;
+   box-shadow: 0 0 100px #738aff;
+}
+
+/* the bookbear header */
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0b0014;
+  color: white;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #0b0014;
+  padding: 50px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+#navbar a {
+  color: #f5e9e2;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-family: monospace;
+  font-style: italic;
+  font-size: 15px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+#navbar #logo { 
+  color: #d44d5c;
+  font-family: arial;
+  font-style: italic;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.4s;
+  margin-left: 5%;
+}
+
+#navbar a:hover {
+  color: #d44d5c;
+}
+
+#navbar-right {
+  float: right;
+  margin-right: 5%;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: left;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: right;
+  }
+}
+
+/* the logos sarawak and other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 100px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  max-height: 900px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -40px;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* All the snapping stuff */
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scroll-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: center;
+    margin-top: 100px;
+    height: 600px;
+    padding: 20px;
+}
+
+section:nth-child(2n) {
+  height: 660px;
+}
+
+section:nth-child(3n) {
+  background: url(./images/borrow_bgV3.png) no-repeat center;
+  background-size: cover;
+  -webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+  height: 1000px;
+}
+
+section:nth-child(4n) {
+  background: url(./images/bearPeek.png) no-repeat center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 800px;
+}
+
+/* Other styles */
+section {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+</style>
+</head>
+<body>
+
+ <div id="navbar">
+ <a href="index.html" id="logo">bookbear</a>
+  <img src="https://i.ibb.co/sjnnjK4/logo-jpg-removebg-bpreview.png" style="height: 20px; position:fixed; margin-left: -3px; margin-top: 3px;">
+  <div id="navbar-right">
+    <a href= "index.html">home</a>
+    <a href= "about.html">about</a>
+    <a href= "howto.html">instructions</a>
+    <a href= "contact.html">contact</a>
+  </div> 
+</div>
+
+<main class="scroll-container">
+<section>
+<div class="container" id="section1">
+<img src="./images/berrySit.png" alt="" style="position: relative; float: right; height: 600px; margin-top: 70px;">
+<img src="./images/sparkle-gifs-get-the-best-gif-on-giphy-sparkles-gif-transparent-480_320.gif" alt="" style="position: absolute; margin-top: 150px; height: 200px;">
+  <h1 class="title"><span style="color: #773344">B</span><span style="color: #e3b5a4">ookbear</span>; <br> Book  <br> Borrowing <br> Services.</h1>
+  <div class="button"><button onclick="document.location = 'about.html'">about</button>
+  <button onclick="document.location = 'howto.html'">instructions</button>
+  <button onclick="document.location = 'contact.html'">contact</button>
+</div>
+</div>
+</section>
+
+<script>
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {  
+    document.getElementById("navbar").style.padding = "30px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+  } else {
+    document.getElementById("navbar").style.padding = "50px 10px";
+    document.getElementById("logo").style.fontSize = "35px";
+  }
+}
+</script> 
+
+<section>
+  <div class="main" id="section2">
+    <a href="login.php" style="text-decoration: none; color: #f5e9e2;"><h1 id="borrow-button">BORROW!</h1></a>
+</section>
+
+<section>
+<div class="main" id="section4">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="https://www.theborneopost.com/newsimages/2020/06/bear.gif" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://live.staticflickr.com/5082/5324277436_5d78042eb1_b.jpg" style="width:100%; height: 100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://www.theborneopost.com/newsimages/2019/04/cl-pustakamiri-greenday-p1.gif" style="width:100%">
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+</script>
+</div>
+
+</div>
+</section>
+
+
+<section>
+  <div class="main" id="section3">
+  <div class="row">
+  <div class="column">
+  <!-- PUSTAKA SRWK -->
+	<a href="https://www.pustaka-sarawak.com/index.php">
+		<img src="https://vectorise.net/vectorworks/logos/Jabatan%20Kerajaan/downloads/Logo%20Pustaka%20Negeri%20Sarawak.png" alt="pustaka logo" style="height: 200px;">
+	</a>
+  </div>
+  <!-- SARAWAK GOV -->
+  <div class="column">
+	<a href="https://www.sarawak.gov.my/">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Coat_of_arms_of_Sarawak.svg/1200px-Coat_of_arms_of_Sarawak.svg.png" alt="kerajaan sarawak logo" style="height: 200px;">
+	</a>
+  </div>
+  <!-- 20 YEAR -->
+   <div class="column">
+    <img src="./images/20logo.png" alt="kerajaan sarawak logo" style="height: 200px;">
+  </div>
+</div>
+<!-- QUOTE -->
+<h3  style="text-align: center;">" The More That You Read, The More Things You Will Know.</h3>
+<h3  style="text-align: center;"> The More That You Learn, The More Places You'll Go. "</h3>
+<h3  style="text-align: center;">- Dr.Seuss</h3>
+</section>
+
+
+
+</main>
+
+
+</body>
+</html> 

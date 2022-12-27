@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri" rel="stylesheet">
+<title>BOOKBEAR SERVICES</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+/* making sure that the scrolling is smooth */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.text-container {
+    margin-top: 350px;
+    margin-bottom: 180px;
+    width: 40%;
+    text-align: justify;
+    font-family: georgia; 
+    letter-spacing: 2px;
+    float: right;
+    margin-right: 180px;
+    background-color: #d44d5c;
+    color: #f5e9e2;
+    padding: 15px;
+    border: 5px solid #f5e9e2; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.text-container:hover {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  animation-name: example;
+  box-shadow: 0 14px 28px rgba(0,0,0,1.25), 0 10px 10px rgba(0,0,0,1.22);
+}
+
+
+@keyframes example {
+    0%   {border-left: 2px solid #773344;}
+    25%  {border-left: 3px solid #773344;}
+    50%  {border-left: 4px solid #773344;}
+    100% {border-left: 5px solid #773344;}
+}
+
+.text-container p {
+    font-size: 20px;
+    word-spacing: 5px;
+    font-family: arial;
+}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(./images/aboutNoBG_TESTV2.png);
+  background-repeat: no-repeat;
+  background-attachment: center;
+  background-position: center;
+  background-size: cover;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #0b0014;
+  padding: 50px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+#navbar a {
+  color: #f5e9e2;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-family: monospace;
+  font-style: italic;
+  font-size: 15px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+#navbar #logo { 
+  color: #d44d5c;
+  font-family: arial;
+  font-style: italic;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.4s;
+  margin-left: 5%;
+}
+
+#navbar a:hover {
+  color: #d44d5c;
+}
+
+#navbar-right {
+  float: right;
+  margin-right: 5%;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div id="navbar">
+ <a href="index.html" id="logo">bookbear</a>
+  <img src="https://i.ibb.co/sjnnjK4/logo-jpg-removebg-bpreview.png" style="height: 20px; position:fixed; margin-left: -3px; margin-top: 3px;">
+  <div id="navbar-right">
+    <a href= "index.html">home</a>
+    <a href= "about.html">about</a>
+    <a href= "howto.html">instructions</a>
+    <a href= "contact.html">contact</a>
+  </div> 
+</div>
+
+<div class="text-container">
+<h1> what is bookbear? </h1>
+  <p>In continuing the programme and activity of <br>
+  reading in the pandemic COVID-19 atmosphere, Sarawak State Library has <br>
+  provided new services through BookBear Services. <br><br>
+BookBear is a direct book loan service to a user's home which users can download the Number app. sa2 via Google Play Store or App Store that will start operating on 13 June 2020 as below: <br><br>
+<span style="letter-spacing: 1px"><b  style="color: #571132;">Operation Day: Monday to Saturday <br>
+Operation Hours: 9:00 am - 5:00 pm <br></span></b><br>
+This initiative is meant to ensure that users get access to the Library collection since Sarawak State Library has not yet fully opened the premises.</p>
+
+</div>
+
+<script>
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.padding = "30px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+  } else {
+    document.getElementById("navbar").style.padding = "80px 10px";
+    document.getElementById("logo").style.fontSize = "35px";
+  }
+}
+</script>
+
+</body>
+</html>
